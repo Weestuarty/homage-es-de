@@ -153,14 +153,14 @@
             <image name="rightband">
                 <pos>1 0.1175</pos>
                 <origin>1 0</origin>
-                <size>0.025 0.6</size>
+                <size>0.0255 0.6</size>
                 <path>./space.webp</path>
                 <color>${backColor}</color>
                 <zIndex>0</zIndex>
             </image>
             <image name="bottomband2">
                 <pos>0 0.0</pos>
-                <size>1 0.1175</size>
+                <size>1 0.12</size>
                 <path>./space.webp</path>
                 <color>${backColor}</color>
                 <zIndex>0</zIndex>
