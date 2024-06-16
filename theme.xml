@@ -381,10 +381,12 @@
                 <horizontalAlignment>center</horizontalAlignment>
             </text>
             <datetime name="gameyear">
-                <pos>0.21125 0.575</pos>
-                <size>0.375 0.1</size>
+                <pos>0.33 0.575</pos>
+                <size>0.175 0.1</size>
                 <origin>00.5 0.5</origin>
                 <metadata>releasedate</metadata>
+                
+                <defaultValue>:space:</defaultValue>
                 <format>%Y</format>
                 <fontPath>./fonts/sansxb.ttf</fontPath>
                 <fontSize>${gameName}</fontSize>
@@ -394,6 +396,15 @@
                 <horizontalAlignment>center</horizontalAlignment>
                 <zIndex>10</zIndex>
             </datetime>
+            <image name="bottomBase5">
+                <pos>0.145 0.575</pos>
+                <maxSize>0.2 0.075</maxSize>
+                <origin>00.5 0.5</origin>
+                <path>./system/logos/system-logo-white/${system.theme}.svg</path>
+                <default>./system/custom/logo/${system.theme}.svg</default>
+                <color>00000077</color>
+                <zIndex>10</zIndex>
+            </image>
             <image name="bottomBase4">
                 <pos>0.21125 0.575</pos>
                 <size>0.375 0.1</size>
