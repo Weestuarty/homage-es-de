@@ -1,0 +1,38 @@
+<theme>
+    <variables>
+       
+    </variables>
+
+    <variant name="maskgrid, masktext">
+        <view name="system">
+            <image name="bottomband">
+                <pos>0 0.6525</pos>
+                <size>1 0.2</size>
+                <path>./space.webp</path>
+                <color>${backColor}</color>
+                <zIndex>0</zIndex>
+            </image>
+            <image name="bottomband2">
+                <pos>0 0.0</pos>
+                <size>1 0.1475</size>
+                <path>./space.webp</path>
+                <color>${backColor}</color>
+                <zIndex>0</zIndex>
+            </image>
+</view>
+    <view name="gamelist">
+   
+    </view>
+       </variant> 
+       <variant name="masktext, logotext">
+        <view name="gamelist">
+            <carousel name="text">
+                
+                <fontSize>0.05</fontSize>
+                
+            </carousel>
+            
+            </view>
+            </variant>
+           
+</theme>

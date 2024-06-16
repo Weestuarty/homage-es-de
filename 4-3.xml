@@ -1,0 +1,69 @@
+<theme>
+    <variables>
+        <sysCarName>0.15</sysCarName>
+        <sysSysName>0.075</sysSysName>
+        <sysHelpFont>0.035</sysHelpFont>
+        <gameGridFont>0.06</gameGridFont>
+        <gameName>0.045</gameName>
+        <gameDesc>0.04</gameDesc>
+    </variables>
+
+<variant name="masktext,maskgrid">
+    <view name="system">
+        <image name="bottomband">
+            <pos>0 0.61</pos>
+            <size>1 0.2</size>
+            <path>./space.webp</path>
+            <color>${backColor}</color>
+            <zIndex>0</zIndex>
+        </image>
+        <image name="bottomband2">
+            <pos>0 0.0</pos>
+            <size>1 0.19</size>
+            <path>./space.webp</path>
+            <color>${backColor}</color>
+            <zIndex>0</zIndex>
+        </image>
+    </view>
+
+    <view name="gamelist">
+   
+    </view>
+        </variant>
+        <variant name="masktext, logotext">
+            <view name="gamelist">
+                <carousel name="text">
+                    <type>vertical</type>
+                    <imageType>none</imageType>
+                    <maxItemCount>5</maxItemCount>
+                    <itemScale>1</itemScale>
+                    <origin>1 0.5</origin>
+                    <pos>0.99 0.5</pos>
+                    <size>0.9 0.95</size>
+                    <itemSize>0.52 0.14</itemSize>
+                    <systemNameSuffix>false</systemNameSuffix>
+                    <textColor>FFFFFF</textColor>
+                    <itemHorizontalAlignment>right</itemHorizontalAlignment>
+                    <selectedItemOffset>-0.45 0.0</selectedItemOffset>
+                    <textSelectedColor>00000000</textSelectedColor>
+                    <textRelativeScale>1</textRelativeScale>
+                    <color>00000000</color>
+                    <fontSize>0.045</fontSize>
+                    <fontPath>./fonts/sansxb.ttf</fontPath>
+                    <lineSpacing>1</lineSpacing>
+                    <zIndex>29</zIndex>
+                </carousel>
+                <badges name="badges">
+                    <pos>0.25 0.645</pos>
+                    <size>0.425 0.15</size>
+                    </badges>
+                </view>
+                </variant>
+                <variant name="logogrid,maskgrid">
+                    <view name="gamelist">
+                        <badges name="badges">
+                            <pos>0.21125 0.735</pos>
+                            </badges>
+                            </view>
+                            </variant>
+</theme>

@@ -1,0 +1,460 @@
+<theme>
+
+    <include>./system/metadata/_default.xml</include>
+    <include>./system/metadata/${system.theme}.xml</include>
+    <include>./system/custom/metadata/${system.theme}.xml</include>
+
+    <include>./system/coversize/${systemCoverSize}.xml</include>
+
+    <variables>
+        <!--Color-->
+        <carColor>FFFFFF</carColor>
+        <backgroundColor>FFFF00</backgroundColor>
+        <baseColor>FFFFFF</baseColor>
+        <backColor>000000</backColor>
+        <sysCarText>FFFFFF</sysCarText>
+        <!--Size-->
+        <sysCarName>0.15</sysCarName>
+        <sysSysName>0.075</sysSysName>
+        <sysHelpFont>0.035</sysHelpFont>
+        <gameGridFont>0.06</gameGridFont>
+        <gameName>0.06</gameName>
+        <gameDesc>0.04</gameDesc>
+
+
+        <carouselImage2>./system/logos/system-logo-mask/${system.theme}.svg</carouselImage2>
+        <carouselImage>./system/controller-outline/${system.theme}.svg</carouselImage>
+    </variables>
+    <colorScheme name="space">
+        <variables>
+            <background>./background.jpg</background>
+        </variables>
+    </colorScheme>
+    <colorScheme name="retro">
+        <variables>
+            <background>./retro.jpg</background>
+        </variables>
+    </colorScheme>
+    <colorScheme name="print">
+        <variables>
+            <background>./blue.webp</background>
+        </variables>
+    </colorScheme>
+
+    <aspectRatio name="4:3">
+        <include>./4-3.xml</include>
+    </aspectRatio>
+    <aspectRatio name="16:10">
+        <include>./16-10.xml</include>
+    </aspectRatio>
+    <aspectRatio name="19.5:9">
+        <include>./195-9.xml</include>
+    </aspectRatio>
+
+    <view name="system, gamelist">
+        <image name="background1">
+            <pos>0 0</pos>
+            <size>1 1</size>
+            <path>${background}</path>
+            <brightness>0.5</brightness>
+            <zIndex>0</zIndex>
+        </image>
+
+    </view>
+    <variant name="all">
+        <view name="system">
+            <gameselector name="game">
+                <gameCount>1</gameCount>
+            </gameselector>
+
+            <carousel name="system_carousel">
+                <pos>0 0.4</pos>
+                <origin>0 0.5</origin>
+                <imageColor>${carColor}</imageColor>
+                <size>1 0.8</size>
+                <itemSize>0.95 0.7</itemSize>
+                <itemTransitions>instant</itemTransitions>
+                <selectedItemMargins>0.175 0.175</selectedItemMargins>
+                <itemScale>1</itemScale>
+                <color>00000000</color>
+                <maxItemCount>1</maxItemCount>
+                <text>${system.fullName}</text>
+                <fontPath>./fonts/sansxb.ttf</fontPath>
+                <textColor>${sysCarText}</textColor>
+                <fontSize>${sysCarName}</fontSize>
+                <textColor>00000000</textColor>
+                <textSelectedColor>000000</textSelectedColor>
+            </carousel>
+
+            <image name="bottomBase">
+                <pos>0 0.8</pos>
+                <size>1 0.2</size>
+                <path>./space.webp</path>
+                <color>${baseColor}</color>
+            </image>
+
+            <text name="sysname">
+                <pos>0.5 0.875</pos>
+                <size>0.95 0.15</size>
+                <origin>0.5 0.5</origin>
+                <text>${systemName}</text>
+                <horizontalAlignment>left</horizontalAlignment>
+                <color>000000</color>
+                <fontSize>${sysSysName}</fontSize>
+                <fontPath>./fonts/sansxb.ttf</fontPath>
+            </text>
+            <text name="gamecount">
+                <pos>0.025 0.94</pos>
+                <size>0.4 0.05</size>
+                <origin>0 0</origin>
+                <systemdata>gamecountGames</systemdata>
+                <horizontalAlignment>left</horizontalAlignment>
+                <verticalAlignment>center</verticalAlignment>
+                <color>000000</color>
+                <fontSize>${sysHelpFont}</fontSize>
+                <fontPath>./fonts/fred.ttf</fontPath>
+            </text>
+            <helpsystem name="help">
+                <textColor>000000</textColor>
+                <iconColor>000000</iconColor>
+                <pos>0.975 0.975</pos>
+                <origin>1 0.5</origin>
+                <fontSize>${sysHelpFont}</fontSize>
+            </helpsystem>
+        </view>
+    </variant>
+    <variant name="logotext, logogrid">
+        <view name="system">
+            <image name="background1">
+                <brightness>-1.5</brightness>
+            </image>
+            <carousel name="system_carousel">
+                <staticImage>${carouselImage}</staticImage>
+                <textSelectedColor>00000000</textSelectedColor>
+            </carousel>
+        </view>
+    </variant>
+    <variant name="masktext,maskgrid">
+        <view name="system">
+            <image name="bottomband">
+                <pos>0 0.68</pos>
+                <size>1 0.2</size>
+                <path>./space.webp</path>
+                <color>${backColor}</color>
+                <zIndex>0</zIndex>
+            </image>
+            <image name="leftband">
+                <pos>0 0.1175</pos>
+                <size>0.025 0.6</size>
+                <path>./space.webp</path>
+                <color>${backColor}</color>
+                <zIndex>0</zIndex>
+            </image>
+            <image name="rightband">
+                <pos>1 0.1175</pos>
+                <origin>1 0</origin>
+                <size>0.025 0.6</size>
+                <path>./space.webp</path>
+                <color>${backColor}</color>
+                <zIndex>0</zIndex>
+            </image>
+            <image name="bottomband2">
+                <pos>0 0.0</pos>
+                <size>1 0.1175</size>
+                <path>./space.webp</path>
+                <color>${backColor}</color>
+                <zIndex>0</zIndex>
+            </image>
+            <carousel name="system_carousel">
+                <staticImage>${carouselImage2}</staticImage>
+                <imageColor>000000</imageColor>
+                <textSelectedColor>FFFFFF</textSelectedColor>
+                <textSelectedBackgroundColor>000000</textSelectedBackgroundColor>
+            </carousel>
+        </view>
+    </variant>
+    <variant name="masktext, logotext">
+        <view name="gamelist">
+            <carousel name="text">
+                <type>vertical</type>
+                <imageType>none</imageType>
+                <maxItemCount>5</maxItemCount>
+                <itemScale>1</itemScale>
+                <origin>1 0.5</origin>
+                <pos>0.99 0.5</pos>
+                <size>0.9 0.95</size>
+                <itemSize>0.52 0.14</itemSize>
+                <systemNameSuffix>false</systemNameSuffix>
+                <textColor>FFFFFF</textColor>
+                <itemHorizontalAlignment>right</itemHorizontalAlignment>
+                <selectedItemOffset>-0.45 0.0</selectedItemOffset>
+                <textSelectedColor>00000000</textSelectedColor>
+                <textRelativeScale>1</textRelativeScale>
+                <color>00000000</color>
+                <fontSize>${gameName}</fontSize>
+                <fontPath>./fonts/sansxb.ttf</fontPath>
+                <lineSpacing>1</lineSpacing>
+                <zIndex>29</zIndex>
+            </carousel>
+            <text name="gamename">
+                <pos>0.5 0.5</pos>
+                <size>.95 0.125</size>
+                <origin>0.5 0.5</origin>
+                <metadata>name</metadata>
+                <fontSize>${gameName}</fontSize>
+                <systemNameSuffix>false</systemNameSuffix>
+                <fontPath>./fonts/sansxb.ttf</fontPath>
+                <color>000000</color>
+                <backgroundColor>FFFFFF</backgroundColor>
+                <backgroundCornerRadius>0.25</backgroundCornerRadius>
+                <lineSpacing>0.9</lineSpacing>
+                <horizontalAlignment>center</horizontalAlignment>
+            </text>
+            <image name="maskback">
+                <pos>0 0</pos>
+                <size>1 1</size>
+                <path>./mask2.svg</path>
+                <color>000000</color>
+                <zIndex>3</zIndex>
+            </image>
+            <datetime name="gameyear">
+                <pos>0.25 0.875</pos>
+                <size>0.425 0.1</size>
+                <origin>00.5 0.5</origin>
+                <metadata>releasedate</metadata>
+                <format>%Y</format>
+                <fontPath>./fonts/sansxb.ttf</fontPath>
+                <fontSize>${gameName}</fontSize>
+                <color>000000</color>
+                <backgroundColor>FFFFFF00</backgroundColor>
+                <lineSpacing>0.9</lineSpacing>
+                <horizontalAlignment>center</horizontalAlignment>
+                <zIndex>10</zIndex>
+            </datetime>
+            <image name="bottomBase4">
+                <pos>0.25 0.875</pos>
+                <size>0.425 0.1</size>
+                <origin>00.5 0.5</origin>
+                <path>./space.webp</path>
+                <color>FFFFFF</color>
+                <cornerRadius>0.25</cornerRadius>
+                <zIndex>9</zIndex>
+            </image>
+            <image name="bottomBase">
+                <pos>0 0</pos>
+                <size>1 1</size>
+                <imageType>fanart,screenshot</imageType>
+                <zIndex>0</zIndex>
+            </image>
+            <image name="bottomBase2">
+                <pos>0 0</pos>
+                <size>1 1</size>
+                <path>./space.webp</path>
+                <color>000000cc</color>
+                <zIndex>1</zIndex>
+            </image>
+            <image name="bottomBase3">
+                <pos>0 0.95</pos>
+                <size>1 0.05</size>
+                <path>./space.webp</path>
+                <color>FFFFFF</color>
+                <zIndex>39</zIndex>
+            </image>
+            <video name="screenshot">
+                <pos>0.25 0.2175</pos>
+                <origin>0.5 0.5</origin>
+                <maxSize>0.45 0.4</maxSize>
+                <imageType>marquee, titlescreen</imageType>
+                <pillarboxes>false</pillarboxes>
+                <zIndex>2</zIndex>
+            </video>
+            <badges name="badges">
+                <pos>0.25 0.63</pos>
+                <size>0.425 0.13</size>
+                <origin>0.5 0</origin>
+                <direction>row</direction>
+                <lines>1</lines>
+                <itemsPerLine>5</itemsPerLine>
+                <horizontalAlignment>center</horizontalAlignment>
+                <slots>completed, controller,favorite, kidgame, manual</slots>
+                <controllerSize>0.8</controllerSize>
+                <controllerPos>0.5 0.425</controllerPos>
+                <badgeIconColor>${baseColor}</badgeIconColor>
+                <customBadgeIcon badge="completed">./system/badges/completed.svg</customBadgeIcon>
+                <customBadgeIcon badge="favorite">./system/badges/favorite.svg</customBadgeIcon>
+                <customBadgeIcon badge="kidgame">./system/badges/kidgame.svg</customBadgeIcon>
+                <customBadgeIcon badge="collection">./system/badges/collection.svg</customBadgeIcon>
+                <customBadgeIcon badge="controller">./system/badges/controller.svg</customBadgeIcon>
+                <customBadgeIcon badge="altemulator">./system/badges/altemulator.svg</customBadgeIcon>
+                <customBadgeIcon badge="manual">./system/badges/manual.svg</customBadgeIcon>
+                <zIndex>20</zIndex>
+            </badges>
+            <helpsystem name="help">
+                <textColor>000000</textColor>
+                <iconColor>000000</iconColor>
+                <pos>0.975 0.975</pos>
+                <origin>1 0.5</origin>
+                <fontSize>${sysHelpFont}</fontSize>
+            </helpsystem>
+        </view>
+    </variant>
+    <variant name="logogrid,maskgrid">
+        <view name="gamelist">
+            <grid name="grid">
+                <origin>0 0</origin>
+                <itemSize>${gridItemSize}</itemSize>
+                <pos>0.4225 0.015</pos>
+                <size>0.57 0.78</size>
+                <itemSpacing>0.0075 0.015</itemSpacing>
+                <imageType>cover</imageType>
+                <imageRelativeScale>1</imageRelativeScale>
+                <itemScale>1.4</itemScale>
+                <systemNameSuffix>false</systemNameSuffix>
+                <unfocusedItemOpacity>1</unfocusedItemOpacity>
+                <selectorLayer>top</selectorLayer>
+                <selectorImage>./system/coversize/${systemCoverSize}.svg</selectorImage>
+                <selectorColor>${systemColor}</selectorColor>
+                <selectorRelativeScale>1.</selectorRelativeScale>
+                <text>${systemName}</text>
+                <textColor>787878</textColor>
+                <backgroundColor>00000000</backgroundColor>
+                <scaleInwards>true</scaleInwards>
+                <imageFit>cover</imageFit>
+                <fractionalRows>true</fractionalRows>
+                <textSelectedColor>FFFFFF</textSelectedColor>
+                <textRelativeScale>0.925</textRelativeScale>
+                <fontSize>${gameGridFont}</fontSize>
+                <letterCase>uppercase</letterCase>
+                <lineSpacing>0.8</lineSpacing>
+                <zIndex>29</zIndex>
+            </grid>
+            <image name="maskback">
+                <pos>0 0</pos>
+                <size>1 1</size>
+                <path>./mask2.svg</path>
+                <color>000000</color>
+                <zIndex>3</zIndex>
+            </image>
+            <badges name="badges">
+                <pos>0.21125 0.715</pos>
+                <size>0.4 0.13</size>
+                <origin>0.5 0.5</origin>
+                <direction>row</direction>
+                <lines>1</lines>
+                <itemsPerLine>5</itemsPerLine>
+                <horizontalAlignment>center</horizontalAlignment>
+                <slots>completed, controller,favorite, kidgame, manual</slots>
+                <controllerSize>0.8</controllerSize>
+                <controllerPos>0.5 0.425</controllerPos>
+                <badgeIconColor>${baseColor}</badgeIconColor>
+                <customBadgeIcon badge="completed">./system/badges/completed.svg</customBadgeIcon>
+                <customBadgeIcon badge="favorite">./system/badges/favorite.svg</customBadgeIcon>
+                <customBadgeIcon badge="kidgame">./system/badges/kidgame.svg</customBadgeIcon>
+                <customBadgeIcon badge="collection">./system/badges/collection.svg</customBadgeIcon>
+                <customBadgeIcon badge="controller">./system/badges/controller.svg</customBadgeIcon>
+                <customBadgeIcon badge="altemulator">./system/badges/altemulator.svg</customBadgeIcon>
+                <customBadgeIcon badge="manual">./system/badges/manual.svg</customBadgeIcon>
+                <zIndex>20</zIndex>
+            </badges>
+            <text name="gamename">
+                <pos>0.025 0.81</pos>
+                <size>0.95 0.125</size>
+                <metadata>name</metadata>
+                <fontSize>${gameName}</fontSize>
+                <systemNameSuffix>false</systemNameSuffix>
+                <fontPath>./fonts/sansxb.ttf</fontPath>
+                <color>000000</color>
+                <backgroundColor>FFFFFF</backgroundColor>
+                <backgroundCornerRadius>0.25</backgroundCornerRadius>
+                <lineSpacing>0.9</lineSpacing>
+                <horizontalAlignment>center</horizontalAlignment>
+            </text>
+            <datetime name="gameyear">
+                <pos>0.21125 0.575</pos>
+                <size>0.375 0.1</size>
+                <origin>00.5 0.5</origin>
+                <metadata>releasedate</metadata>
+                <format>%Y</format>
+                <fontPath>./fonts/sansxb.ttf</fontPath>
+                <fontSize>${gameName}</fontSize>
+                <color>000000</color>
+                <backgroundColor>FFFFFF00</backgroundColor>
+                <lineSpacing>0.9</lineSpacing>
+                <horizontalAlignment>center</horizontalAlignment>
+                <zIndex>10</zIndex>
+            </datetime>
+            <image name="bottomBase4">
+                <pos>0.21125 0.575</pos>
+                <size>0.375 0.1</size>
+                <origin>00.5 0.5</origin>
+                <path>./space.webp</path>
+                <color>FFFFFF</color>
+                <cornerRadius>0.25</cornerRadius>
+                <zIndex>9</zIndex>
+            </image>
+            <image name="bottomBase">
+                <pos>0 0</pos>
+                <size>1 1</size>
+                <imageType>fanart,screenshot</imageType>
+                <zIndex>0</zIndex>
+            </image>
+            <image name="bottomBase2">
+                <pos>0 0</pos>
+                <size>1 1</size>
+                <path>./space.webp</path>
+                <color>000000cc</color>
+                <zIndex>1</zIndex>
+            </image>
+            <image name="bottomBase3">
+                <pos>0 0.95</pos>
+                <size>1 0.05</size>
+                <path>./space.webp</path>
+                <color>000000</color>
+                <zIndex>39</zIndex>
+            </image>
+            <video name="screenshot">
+                <pos>0.21125 0.075</pos>
+                <origin>0.5 0</origin>
+                <pillarboxes>false</pillarboxes>
+                <maxSize>0.4 0.4</maxSize>
+                <imageType>screenshot, titlescreen</imageType>
+                <zIndex>2</zIndex>
+            </video>
+            
+            <helpsystem name="help">
+                <textColor>FFFFFF</textColor>
+                <iconColor>FFFFFF</iconColor>
+                <pos>0.975 0.975</pos>
+                <origin>1 0.5</origin>
+                <fontSize>${sysHelpFont}</fontSize>
+            </helpsystem>
+        </view>
+    </variant>
+
+    <!-- If you want to add custom sounds ucomment the next block and add your sounds at the paths
+    indicated below -->
+    <!--<view
+    name="all">
+        <sound name="systembrowse">
+            <path>./core/sounds/systembrowse.wav</path>
+        </sound>
+        <sound name="quicksysselect">
+            <path>./core/sounds/systembrowse.wav</path>
+        </sound>
+        <sound name="select">
+            <path>./core/sounds/select.wav</path>
+        </sound>
+        <sound name="back">
+            <path>./core/sounds/back.wav</path>
+        </sound>
+        <sound name="scroll">
+            <path>./core/sounds/scroll.wav</path>
+        </sound>
+        <sound name="favorite">
+            <path>./core/sounds/favorite.wav</path>
+        </sound>
+        <sound name="launch">
+            <path>./core/sounds/launch.wav</path>
+        </sound>
+    </view>-->
+</theme>

@@ -1,0 +1,37 @@
+<themeCapabilities>
+   <aspectRatio>16:9</aspectRatio>
+    <aspectRatio>4:3</aspectRatio>
+    <aspectRatio>16:10</aspectRatio>
+    <aspectRatio>19.5:9</aspectRatio>
+   <themeName>homage</themeName>
+   <fontSize>medium</fontSize>
+   <fontSize>large</fontSize>
+   <fontSize>x-large</fontSize>
+
+   <variant name="masktext">
+      <label>Mask w Textlist</label>
+      <selectable>true</selectable>
+   </variant>
+   <variant name="maskgrid">
+      <label>Mask w Grid</label>
+      <selectable>true</selectable>
+   </variant>
+   <variant name="logotext">
+      <label>No Mask w Textlist</label>
+      <selectable>true</selectable>
+   </variant>
+   <variant name="logogrid">
+      <label>No Mask w Grid</label>
+      <selectable>true</selectable>
+   </variant>
+
+   <colorScheme name="space">
+      <label>Universe</label>
+  </colorScheme>
+  <colorScheme name="retro">
+   <label>Vintage</label>
+</colorScheme>
+<colorScheme name="print">
+   <label>Blueprints</label>
+</colorScheme>
+</themeCapabilities>
