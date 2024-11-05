@@ -23,21 +23,24 @@
 
 
         <carouselImage2>./system/logos/system-logo-mask/${system.theme}.svg</carouselImage2>
-        <carouselImage>./system/controller-outline/${system.theme}.svg</carouselImage>
+        <carouselImage>./system/logos/system-logo-white/${system.theme}.svg</carouselImage>
     </variables>
     <colorScheme name="space">
         <variables>
-            <background>./background.jpg</background>
+            <background>./space.mp4</background>
+            <outlineColor>FFFFFF</outlineColor>
         </variables>
     </colorScheme>
     <colorScheme name="retro">
         <variables>
-            <background>./retro.jpg</background>
+            <background>./70.mp4</background>
+            <outlineColor>000000</outlineColor>
         </variables>
     </colorScheme>
     <colorScheme name="print">
         <variables>
-            <background>./blue.webp</background>
+            <background>./retro.mp4</background>
+            <outlineColor>000000</outlineColor>
         </variables>
     </colorScheme>
 
@@ -52,14 +55,15 @@
     </aspectRatio>
 
     <view name="system, gamelist">
-        <image name="background1">
-            <pos>0 0</pos>
-            <size>1 1</size>
-            <path>${background}</path>
-            <brightness>0.5</brightness>
-            <zIndex>0</zIndex>
-        </image>
-
+        <video name="background1">
+                <pos>0 0</pos>
+                <size>1 1</size>
+                <path>${background}</path>
+                <brightness>0.5</brightness>
+                <delay>0</delay>
+                <fadeInTime>0</fadeInTime>
+                <zIndex>0</zIndex>
+            </video>
     </view>
     <variant name="all">
         <view name="system">
@@ -130,6 +134,7 @@
             </image>
             <carousel name="system_carousel">
                 <staticImage>${carouselImage}</staticImage>
+                <imageColor>${outlineColor}</imageColor>
                 <textSelectedColor>00000000</textSelectedColor>
             </carousel>
         </view>
@@ -141,14 +146,14 @@
                 <size>1 0.2</size>
                 <path>./space.webp</path>
                 <color>${backColor}</color>
-                <zIndex>0</zIndex>
+                <zIndex>2</zIndex>
             </image>
             <image name="leftband">
                 <pos>0 0.1175</pos>
                 <size>0.025 0.6</size>
                 <path>./space.webp</path>
                 <color>${backColor}</color>
-                <zIndex>0</zIndex>
+                <zIndex>2</zIndex>
             </image>
             <image name="rightband">
                 <pos>1 0.1175</pos>
@@ -156,14 +161,14 @@
                 <size>0.0255 0.6</size>
                 <path>./space.webp</path>
                 <color>${backColor}</color>
-                <zIndex>0</zIndex>
+                <zIndex>2</zIndex>
             </image>
             <image name="bottomband2">
                 <pos>0 0.0</pos>
                 <size>1 0.12</size>
                 <path>./space.webp</path>
                 <color>${backColor}</color>
-                <zIndex>0</zIndex>
+                <zIndex>2</zIndex>
             </image>
             <carousel name="system_carousel">
                 <staticImage>${carouselImage2}</staticImage>
@@ -251,12 +256,7 @@
                 <cornerRadius>0.25</cornerRadius>
                 <zIndex>9</zIndex>
             </image>
-            <image name="bottomBase">
-                <pos>0 0</pos>
-                <size>1 1</size>
-                <imageType>fanart,screenshot</imageType>
-                <zIndex>0</zIndex>
-            </image>
+            
             <image name="bottomBase2">
                 <pos>0 0</pos>
                 <size>1 1</size>
@@ -412,12 +412,7 @@
                 <cornerRadius>0.25</cornerRadius>
                 <zIndex>9</zIndex>
             </image>
-            <image name="bottomBase">
-                <pos>0 0</pos>
-                <size>1 1</size>
-                <imageType>fanart,screenshot</imageType>
-                <zIndex>0</zIndex>
-            </image>
+           
             <image name="bottomBase2">
                 <pos>0 0</pos>
                 <size>1 1</size>
