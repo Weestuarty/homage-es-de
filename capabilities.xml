@@ -1,12 +1,31 @@
 <themeCapabilities>
    <aspectRatio>16:9</aspectRatio>
-    <aspectRatio>4:3</aspectRatio>
-    <aspectRatio>16:10</aspectRatio>
-    <aspectRatio>19.5:9</aspectRatio>
+   <aspectRatio>4:3</aspectRatio>
+   <aspectRatio>16:10</aspectRatio>
+   <aspectRatio>19.5:9</aspectRatio>
+
    <themeName>homage</themeName>
+   
    <fontSize>medium</fontSize>
    <fontSize>large</fontSize>
    <fontSize>x-large</fontSize>
+
+   <language>en_US</language>
+   <language>en_GB</language>
+   <language>ca_ES</language>
+   <language>de_DE</language>
+   <language>es_ES</language>
+   <language>fr_FR</language>
+   <language>it_IT</language>
+   <language>nl_NL</language>
+   <language>pl_PL</language>
+   <language>pt_BR</language>
+   <language>ro_RO</language>
+   <language>ru_RU</language>
+   <language>sv_SE</language>
+   <language>ja_JP</language>
+   <language>ko_KR</language>
+   <language>zh_CN</language>
 
    <variant name="masktext">
       <label>Mask w Textlist</label>
@@ -24,14 +43,33 @@
       <label>No Mask w Grid</label>
       <selectable>true</selectable>
    </variant>
+   <variant name="masktextsys">
+      <label>Mask w Textlist w/systemcol</label>
+      <selectable>true</selectable>
+   </variant>
+   <variant name="maskgridsys">
+      <label>Mask w Grid w/systemcol</label>
+      <selectable>true</selectable>
+   </variant>
+   <variant name="logotextsys">
+      <label>No Mask w Textlist w/systemcol</label>
+      <selectable>true</selectable>
+   </variant>
+   <variant name="logogridsys">
+      <label>No Mask w Grid w/systemcol</label>
+      <selectable>true</selectable>
+   </variant>
 
    <colorScheme name="space">
       <label>Universe</label>
-  </colorScheme>
-  <colorScheme name="retro">
-   <label>Vintage</label>
-</colorScheme>
-<colorScheme name="print">
-   <label>Blueprints</label>
-</colorScheme>
+   </colorScheme>
+   <colorScheme name="retro">
+      <label>Vintage</label>
+   </colorScheme>
+   <colorScheme name="print">
+      <label>Retro</label>
+   </colorScheme>
+   <colorScheme name="static">
+      <label>static</label>
+   </colorScheme>
 </themeCapabilities>
