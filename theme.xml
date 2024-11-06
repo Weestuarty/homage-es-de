@@ -25,6 +25,41 @@
         <carouselImage2>./system/logos/system-logo-mask/${system.theme}.svg</carouselImage2>
         <carouselImage>./system/logos/system-logo-white/${system.theme}.svg</carouselImage>
     </variables>
+
+    <variant name="masktext, maskgrid, logotext, logogrid">
+
+    <colorScheme name="space">
+        <variables>
+            <background>./space.mp4</background>
+            <outlineColor>FFFFFF</outlineColor>
+            <satLevel>1</satLevel>
+        </variables>
+    </colorScheme>
+    <colorScheme name="static">
+        <variables>
+            <background>./static.mp4</background>
+            <outlineColor>FFFFFF</outlineColor>
+            <satLevel>0</satLevel>
+        </variables>
+        </colorScheme>
+    <colorScheme name="retro">
+        <variables>
+            <background>./70.mp4</background>
+            <outlineColor>000000</outlineColor>
+            <satLevel>1</satLevel>
+        </variables>
+        
+    </colorScheme>
+    <colorScheme name="print">
+        <variables>
+            <background>./retro.mp4</background>
+            <outlineColor>000000</outlineColor>
+            <satLevel>1</satLevel>
+        </variables>
+    </colorScheme>
+</variant>
+<variant name="masktextsys, maskgridsys, logotextsys, logogridsys">
+
     <colorScheme name="space">
         <variables>
             <background>./space.mp4</background>
@@ -36,7 +71,7 @@
         <variables>
             <background>./static.mp4</background>
             <outlineColor>FFFFFF</outlineColor>
-            <satLevel>0.5</satLevel>
+            <satLevel>.5</satLevel>
         </variables>
         </colorScheme>
     <colorScheme name="retro">
@@ -54,7 +89,7 @@
             <satLevel>0.5</satLevel>
         </variables>
     </colorScheme>
-
+</variant>
     <aspectRatio name="4:3">
         <include>./4-3.xml</include>
     </aspectRatio>
@@ -73,6 +108,7 @@
                 <path>${background}</path>
                 <brightness>0.5</brightness>
                 <delay>0</delay>
+                <saturation>${satLevel}</saturation>
                 <fadeInTime>0</fadeInTime>
                 <zIndex>0</zIndex>
             </video>
@@ -299,6 +335,7 @@
                 <maxSize>0.45 0.4</maxSize>
                 <imageType>marquee, titlescreen</imageType>
                 <pillarboxes>false</pillarboxes>
+                <scrollFadeIn>true</scrollFadeIn>
                 <zIndex>2</zIndex>
             </video>
             <badges name="badges">
